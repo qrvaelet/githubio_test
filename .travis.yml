@@ -1,0 +1,11 @@
+language: python
+python:
+  - 3.5
+install:
+  - pip install sphinx sphinx_rtd_theme
+script: sphinx-build -b html . docs
+after_success:
+  - ./update.sh
+env:
+  global:
+    - secure: "PASTE ENCRYPTED RESULT HERE"
